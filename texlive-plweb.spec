@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/gene/pl
+# catalog-date 2008-09-11 18:52:21 +0200
+# catalog-license other-free
+# catalog-version 3.0
 Name:		texlive-plweb
 Version:	3.0
 Release:	1
@@ -51,6 +57,7 @@ Prolog, Quintus-Prolog, or ECLiPSe.
 %doc %{_texmfdistdir}/source/latex/plweb/Makefile
 %doc %{_texmfdistdir}/source/latex/plweb/pl.dtx
 %doc %{_texmfdistdir}/source/latex/plweb/pl.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -61,3 +68,5 @@ Prolog, Quintus-Prolog, or ECLiPSe.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
