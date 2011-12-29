@@ -18,9 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 Instead of having to transform the common source into program
@@ -29,20 +26,12 @@ have one common source which can be interpreted by a Prolog
 system as well as by LaTeX, whether that Prolog system be C-
 Prolog, Quintus-Prolog, or ECLiPSe.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -58,7 +47,6 @@ Prolog, Quintus-Prolog, or ECLiPSe.
 %doc %{_texmfdistdir}/source/latex/plweb/Makefile
 %doc %{_texmfdistdir}/source/latex/plweb/pl.dtx
 %doc %{_texmfdistdir}/source/latex/plweb/pl.ins
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -69,5 +57,3 @@ Prolog, Quintus-Prolog, or ECLiPSe.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
