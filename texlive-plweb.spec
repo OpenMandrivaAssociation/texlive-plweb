@@ -57,3 +57,17 @@ Prolog, Quintus-Prolog, or ECLiPSe.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.0-2
++ Revision: 754982
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.0-1
++ Revision: 719277
+- texlive-plweb
+- texlive-plweb
+- texlive-plweb
+- texlive-plweb
+
