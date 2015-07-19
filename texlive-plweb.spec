@@ -6,7 +6,7 @@
 # catalog-version 3.0
 Name:		texlive-plweb
 Version:	3.0
-Release:	9
+Release:	10
 Summary:	Literate Programming for Prolog with LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gene/pl
