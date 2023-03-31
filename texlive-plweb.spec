@@ -1,6 +1,6 @@
 Name:		texlive-plweb
 Version:	15878
-Release:	1
+Release:	2
 Summary:	Literate Programming for Prolog with LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gene/pl
