@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Literate Programming for Prolog with LaTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gene/pl
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/gene/pl
 License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/plweb.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/plweb.doc.r%{version}.tar.xz
